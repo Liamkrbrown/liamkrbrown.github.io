@@ -1,0 +1,262 @@
+:root {
+    --yellow: rgb(242, 210, 159);
+    --lyellow: rgb(251, 224, 179);
+    --dyellow: rgb(215, 196, 164);
+    --eggshell: rgb(251, 248, 230);
+    --blue: rgb(61,64,91);
+    --green: rgb(129,178,154);
+    --auburn: rgb(224,122,95);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Albert Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--eggshell);
+    font-size:  16px;
+}
+
+/* Header Banner */
+
+header {
+    block-size: 300px;
+    display: flex;
+    align-items: center;
+    background-image: url("../images/banner.jpeg");
+    background-size: cover;
+    background-position: center;
+    max-height: 500px;
+}
+
+/*resizing image when screen is over 1024px */
+@media screen and (min-width: 820px) {
+    header {
+        block-size: 400px;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+}
+
+header section {
+    position: sticky;
+    inline-size: 90vw;
+    max-inline-size: 1200px;
+    margin: 0 auto;
+    top: 2rem;
+}
+
+h1 {
+    font-size: 40px; 
+    color: var(--eggshell);
+    background-color: rgba(var(--auburn),0.5);
+    padding-block: 0.5em;
+    border-radius: 10px;
+    background-color: var(--blue);
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: 10px;
+    text-align: right;
+    padding: 10px;
+}
+
+/* Main */
+
+main { 
+    inline-size: 90vw;
+    max-inline-size: 1200px;
+    margin: 0 auto 2em auto;
+}
+
+@media screen and (min-width: 820px) {
+    main  {
+        display: grid;
+        grid-template-columns: auto minmax(min-content, 1fr);
+    }   
+}
+
+article { 
+    margin-block: 3em;
+}
+
+table,
+article > section {
+    margin-block: .2em;
+}
+
+h2,
+h3 { 
+    margin-block: .2em;
+}
+
+@media screen and (min-width: 820px) {
+    div { 
+        grid-column: 2;
+        padding-inline: 1.5em 0;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+code { 
+    font-family: 'Source Code Pro', monospace;
+    display: inline-block;
+    color: white;
+    background: var(--blue);
+}
+
+/* main - Nav */
+
+nav#topics { 
+    display: none;
+    margin-block: 3em;
+    border-right: 1px dashed var(--yellow);
+}
+
+@media screen and (min-width: 820px) {
+    nav#topics {
+        display: block;
+        grid-column: 1;
+        max-width: fit-content;
+    }
+}
+
+nav#topics ul {
+    position: sticky;
+    padding-right: 0.7em;
+    top: 1em;
+}
+
+nav#topics ul li {
+    list-style: none;
+}
+
+nav#topics ul li a {
+    display: block;
+    padding: 0.7em;
+    margin-block-end: 0.5em;
+    text-decoration: none;
+    color: black;
+    border: 1px solid var(--blue);
+    border-radius: 0.3em;
+    transition: .2s background ease-in;
+}
+
+nav#topics ul li a:hover {
+    background-color: var(--blue);
+    color: whitesmoke;
+    transition: .2s background ease-in, .2s color ease-in;
+}
+
+
+nav .css {
+    border: 1px solid var(--auburn) !important;
+}
+
+nav .css:hover {
+    background-color: var(--auburn) !important;
+}
+
+
+
+/* Main > Table */
+
+table {
+    padding: 10px;
+    inline-size: 100%;
+    border: 2px dashed var(--blue);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 0.3em;
+}
+
+thead tr { 
+    background-color: var(--yellow);
+}
+
+th {
+    font-size: 20px;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr { 
+    background-color: var(--lyellow);
+}
+
+td { 
+    padding: 10px;
+}
+
+tbody tr:nth-of-type(even) {
+    background:var(--yellow)
+}
+
+tr:hover, 
+tr:nth-of-type(even):hover {
+    background-color: var(--dyellow);
+}
+
+
+/* Rescources */
+
+.bookmark { 
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: 0;
+    max-width: 400px;
+    min-width: 150px;
+    transition-property: left, top, box-shadow;
+    transition-duration: 0.5s, 0.5s, 0.5s;
+    list-style: none; 
+    border: 1px solid var(--green);
+    padding: 2em 1em;
+    border-radius: 0.3em;
+    margin-block: 1em;
+    background-color: var(--green);
+}
+
+.bookmark:hover {
+    top: -0.5em;
+    left: 0.5em;
+    box-shadow: -0.5em 0.5em 0 var(--lyellow);
+    transition-property: left, top, box-shadow;
+    transition-duration: 0.5s, 0.5s, 0.5s;
+}
+
+.bookmark a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+
+/* Footer */
+
+footer { 
+    color: whitesmoke;
+    background-color: var(--blue);
+    background-size: cover;
+}
+
+footer > div { 
+    inline-size: 90vw;
+    margin: 0 auto; 
+    text-align: center;
+    padding: 1em;
+}
+
+footer p {
+    letter-spacing: 0.8px;
+    font-size: 12px;
+    padding-left: 10px;
+}
