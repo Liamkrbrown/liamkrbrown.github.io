@@ -5,7 +5,10 @@
     --eggshell: rgb(251, 248, 230);
     --blue: rgb(61,64,91);
     --green: rgb(129,178,154);
+    --lgreen: rgb(144, 198, 172);
+    --dgreen: rgb(123, 173, 149);
     --auburn: rgb(224,122,95);
+    --blackCoffee: hsl(320, 10%, 18%);
 }
 
 * {
@@ -57,10 +60,9 @@ header section {
 h1 {
     font-size: 40px; 
     color: var(--eggshell);
-    background-color: rgba(var(--auburn),0.5);
     padding-block: 0.5em;
     border-radius: 10px;
-    background-color: var(--blue);
+    background-color: var(--auburn);
     max-width: max-content;
     margin-left: auto;
     margin-right: 10px;
@@ -106,12 +108,6 @@ h3 {
     }
 }
 
-code { 
-    font-family: 'Source Code Pro', monospace;
-    display: inline-block;
-    color: white;
-    background: var(--blue);
-}
 
 /* main - Nav */
 
@@ -145,24 +141,24 @@ nav#topics ul li a {
     margin-block-end: 0.5em;
     text-decoration: none;
     color: black;
-    border: 1px solid var(--blue);
+    border: 1px solid var(--auburn);
     border-radius: 0.3em;
     transition: .2s background ease-in;
 }
 
 nav#topics ul li a:hover {
-    background-color: var(--blue);
+    background-color: var(--auburn);
     color: whitesmoke;
     transition: .2s background ease-in, .2s color ease-in;
 }
 
 
-nav .css {
-    border: 1px solid var(--auburn) !important;
+nav .html {
+    border: 1px solid var(--blue) !important;
 }
 
-nav .css:hover {
-    background-color: var(--auburn) !important;
+nav .html:hover {
+    background-color: var(--blue) !important;
 }
 
 
@@ -172,7 +168,7 @@ nav .css:hover {
 table {
     padding: 10px;
     inline-size: 100%;
-    border: 2px dashed var(--blue);
+    border: 2px dashed var(--yellow);
     border-collapse: separate;
     border-spacing: 0;
     border-radius: 0.3em;
@@ -205,6 +201,23 @@ tr:nth-of-type(even):hover {
     background-color: var(--dyellow);
 }
 
+
+/* Main > Code */ 
+
+code { 
+    font-family: 'Source Code Pro', monospace;
+    display: inline-block;
+    color: white;
+    background: var(--auburn);
+}
+
+.code-snippet { 
+    background-color: var(--blackCoffee);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    box-shadow: -0.1em 0.1em 0.7em rgba(0,0,0,0.5);
+}
 
 /* Rescources */
 
@@ -244,7 +257,7 @@ tr:nth-of-type(even):hover {
 
 footer { 
     color: whitesmoke;
-    background-color: var(--blue);
+    background-color: var(--auburn);
     background-size: cover;
 }
 
