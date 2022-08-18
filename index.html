@@ -79,8 +79,14 @@
                     <h1 class="header-right">Liam Brown</h1>
                     <article>
                         <h2>Projects</h2>
-                        <section>
-                            <div class="project-card"></div>
+                        <section class="swiper cardSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide project-card">Project 1</div>
+                                <div class="swiper-slide project-card">Project 2</div>
+                                <div class="swiper-slide project-card">Project 3</div>
+                                <div class="swiper-slide project-card">Project 4</div>
+                                <div class="swiper-slide project-card">Project 5</div>
+                            </div>
                         </section>
                         <h3>Project #1</h3>
                         <p>Web app built using bootsrap framework and weatherAPI to collate weather data on a region specific query.</p>
@@ -90,6 +96,7 @@
 
         </main>
     </div>
+    <!-- Swiper JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -107,6 +114,12 @@
             prevEl: ".swiper-button-prev",
           },
         });
-      </script>
-    <script src="main.js"></script>
+    </script>
+    <script>
+            var cardSwiper = new Swiper(".cardSwiper", {
+              effect: "cards",
+              grabCursor: true,
+            });
+    </script>
+    <script src="main.js"></script
 </body>

@@ -280,10 +280,16 @@ p {
     width: 95%;
 }
 
+/* Project Card swiper */
+
+.swiper.cardSwiper { 
+    width: 70vw;
+}
+
 .project-card { 
-    width: 200px;
-    height: 300px;
+    width: 50px;
+    height: 40vh;
     border-radius: 10px;
-    background-color: var(--grey);
+    background-color: var(--off-white);
 }
 /* --------------------------- */
