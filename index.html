@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Hammersmith+One&display=swap" rel="stylesheet">
+    <!-- Swiper JS link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <!-- Style sheet link -->
+    <link rel="stylesheet" href="./resources/css/stylenew.css">
+    <title>Liam Brown || Front End Developer</title>
+</head>
+
+<body>
+    <div class="content">
+
+        <nav>
+            <a><button class="hire-me">Hire me!</button></a>
+            <div class="switch">
+                <label class="page-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox"/>
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </nav>
+
+        <main>
+
+            <div class="pages-container">
+                <div class="about page">
+                    <h1 class="header-left">Liam Brown</h1>
+                    <article class="about content"> 
+                        <img src="./resources/images/Me.jpeg" alt="self portrait">
+                        <h2>About me</h2>
+                        <p>Since beginning my journey as a freelance designer over 11 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.</p>
+                        <section id="tech-container">
+                            <div class="swiper mySwiper container">
+                            <div class="swiper-wrapper tech">
+                                <div class="swiper-slide card">
+                                    <img src="./resources/images/logos/html.svg">
+                                </div>
+                                <div class="swiper-slide card">
+                                        <img src="./resources/images/logos/css.svg">
+                                </div>
+                                <div class="swiper-slide card">
+                                    <img src="./resources/images/logos/JavaScript.png">
+                                </div>
+                                <div class="swiper-slide card">
+                                    <img src="./resources/images/logos/nodejs.png">
+                                </div>
+                                <div class="swiper-slide card">
+                                    <img src="./resources/images/logos/react.png">
+                                </div>
+                                <div class="swiper-slide card">
+                                    <img src="./resources/images/logos/Sass logo.png">
+                                </div>
+                                <div class="swiper-slide card">
+                                    <img src="./resources/images/logos/Sass logo.png">
+                                </div>
+                                <div class="swiper-slide card">
+                                    <img src="./resources/images/logos/Sass logo.png">
+                                </div>
+                                <div class="swiper-slide card">
+                                    <img src="./resources/images/logos/Sass logo.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        </section>
+
+
+                    </article>
+                </div>
+
+                <div class="projects page">
+                    <h1 class="header-right">Liam Brown</h1>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 4,
+          spaceBetween: 10,
+          slidesPerGroup: 3,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+    <script src="main.js"></script>
+</body>
