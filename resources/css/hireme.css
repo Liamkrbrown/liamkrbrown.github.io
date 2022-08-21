@@ -10,7 +10,7 @@
 
 * { 
     box-sizing: border-box;
-
+    font-family: sans-serif;
 }
 
 body { 
@@ -26,6 +26,11 @@ p {
 }
 
 section { 
+    display: flex;
+    margin-top: 10vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
     animation: fadeIn 1s;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
@@ -41,19 +46,89 @@ h4 {
     font-family: 'Hammersmith One', sans-serif;
 }
 
+h2 {
+    font-size: 1.2rem;
+    color: var(--off-white);
+}
+
 p { 
     font-family: 'Halant', serif;
-    line-height: 2rem;
+    line-height: 1.2rem;
 }
 
 
-/* --------- Animations ---------- */
 
-@keyframes fadeIn { 
+/* -------------- Main --------------- */
+
+.button { 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vw;
+    height: 8vh;
+    border-radius: 100px;
+    background-color: var(--off-white);
+    font-size: 1.1rem;
+    bottom: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.home { 
+    bottom: 1vh;
+    background-color: var(--yellow);
+}
+
+form { 
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 1.2vh;
+    width: 90%;
+    height: 40vh;
+    background-color: var(--off-white);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+form p,
+label { 
+    font-family: 'Halant', serif;
+    color: var(--grey);
+}
+
+input { 
+    border-radius: 5px;
+    border: 1px solid var(--navy);
+    padding: 5px;
+}
+
+#description { 
+    width: 150%;
+    height: 80%;
+}
+/* --------- Swipe up transition ---------- */
+
+.transition-slide { 
+    background-color: var(--yellow);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    animation: slideUp 0.4s ease-out both;
+}
+
+@keyframes slideUp {
     0% { 
-        opacity: 0%;
+        top: 0vh;
     }
     100% { 
-        opacity: 100%;
+        top: -100vh;
     }
+    
 }

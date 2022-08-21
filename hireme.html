@@ -11,10 +11,36 @@
     <title>Liam Brown || Front End Developer</title>
 </head>
 <body>
+    <div class="transition-slide"></div>
+    <nav>
+        <a><button class="button submit"><h3>Submit</h3></button></a>
+        <a href="./index.html"><button class="button home"><h3>Home</h3></button></a>
+    </nav>
     <section>
         <h1>Want to work together?</h1>
-        <p>Fill in an enquiry for a quote!</p>
+        <h2>Fill in an enquiry for a quote!</h2>
+            <form>
+                <div>
+                    <label for="name">Name: </label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="number">Contact Number: </label><br>
+                    <input type="text" id="number" name="number"><br>
+                    <label for="email">Email Address: </label><br>
+                    <input type="email" id="email" name="email"><br>
+                </div>
+                <div>
+                    <p>Preffered Contact Method: </p>
+                    <input type="radio" id="cemail" name="contact-method" value="Email">
+                    <input type="radio" id="cphone" name="contact-method" value="Phone">
+                </div>
+                <div>
+                    <label for="description">Description: </label><br>
+                    <input type="text" id="description" name="description"><br>
+                </div>
 
+                <input type="submit" class="button submit" value="Submit">
+
+            </form>
     </section>
 </body>
 </html>

@@ -15,10 +15,10 @@
 </head>
 
 <body>
-    <div class="content">
+    <div class="content" id="main">
 
         <nav>
-            <a><button class="hire-me">Hire me!</button></a>
+            <button class="hire-me" onclick="hireMeTransition()">Hire me!</button>
             <div class="switch">
                 <label class="page-switch" for="checkbox">
                     <input type="checkbox" id="checkbox"/>
@@ -33,8 +33,10 @@
                 <div class="about page">
                     <h1 class="header-left">Liam Brown</h1>
                     <article class="about content"> 
-                        <img src="./resources/images/Me.jpeg" alt="self portrait">
-                        <h2>About me</h2>
+                        <div class="image-header">
+                            <img src="./resources/images/Me.jpeg" alt="self portrait">
+                            <h2>About me</h2>
+                        </div>
                         <p>Since beginning my journey as a freelance designer over 11 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.</p>
                         <section id="tech-container">
                             <div class="swiper mySwiper container">
@@ -58,13 +60,13 @@
                                     <img src="./resources/images/logos/Sass logo.png">
                                 </div>
                                 <div class="swiper-slide card">
-                                    <img src="./resources/images/logos/Sass logo.png">
+                                    <img src="./resources/images/logos/Python.png">
                                 </div>
                                 <div class="swiper-slide card">
-                                    <img src="./resources/images/logos/Sass logo.png">
+                                    <img src="./resources/images/logos/django.svg">
                                 </div>
                                 <div class="swiper-slide card">
-                                    <img src="./resources/images/logos/Sass logo.png">
+                                    <img src="./resources/images/logos/C.png">
                                 </div>
                             </div>
                         </div>
@@ -81,15 +83,19 @@
                         <h2>Projects</h2>
                         <section class="swiper cardSwiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide project-card">Project 1</div>
-                                <div class="swiper-slide project-card">Project 2</div>
+                                <div class="swiper-slide project-card">
+                                    <img src="./resources/images/Project-screenshots/portfolio1.png">
+                                </div>
+                                <div class="swiper-slide project-card">
+                                    <img src="./resources/images/Project-screenshots/digitalNotebook.png">
+                                </div>
                                 <div class="swiper-slide project-card">Project 3</div>
                                 <div class="swiper-slide project-card">Project 4</div>
                                 <div class="swiper-slide project-card">Project 5</div>
                             </div>
                         </section>
-                        <h3>Project #1</h3>
-                        <p>Web app built using bootsrap framework and weatherAPI to collate weather data on a region specific query.</p>
+                        <h3 id="project-header">Project #1</h3>
+                        <p id="project-description">Web app built using bootsrap framework and weatherAPI to collate weather data on a region specific query.</p>
                     </article>
                 </div>
             </div>
@@ -98,28 +104,6 @@
     </div>
     <!-- Swiper JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 4,
-          spaceBetween: 10,
-          slidesPerGroup: 3,
-          loop: true,
-          loopFillGroupWithBlank: true,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-    </script>
-    <script>
-            var cardSwiper = new Swiper(".cardSwiper", {
-              effect: "cards",
-              grabCursor: true,
-            });
-    </script>
-    <script src="main.js"></script
+    <script src="./swiper.js"></script>
+    <script src="main.js"></script>
 </body>

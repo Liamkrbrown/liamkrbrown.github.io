@@ -65,12 +65,8 @@ a {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    /* 
-    width: 7.5rem;
-    height: 4.375rem; */
-
-    width: 40vw;
-    height: 10vh;
+    width: clamp(50px, 40vw, 150px);
+    height: clamp(25px, 10vh, 80px);
     border-radius: 100px;
     background-color: var(--yellow);
     border: none;
@@ -196,22 +192,37 @@ body {
     height: 80%;
     width: 100%;
 }
+
+.image-header { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .about.content h2 { 
     color: var(--navy);
     border-bottom: 2px dashed var(--yellow);
     margin-bottom: 5%;
 }
 .about.content img { 
-    width: 50%;
-    margin: 5%;
+    width: 20vh;
+    width: 20vh 20vw / 2;
+    margin: 2%;
     height: auto;
     border-radius: 100%;
 }
 
+.swiper-slide.card img { 
+    width: 50%;
+    height: auto;
+    border-radius: 0;
+}
+
 .about.content p { 
+    width: 90%;
     text-align: center;
     color: var(--navy);
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.3rem;
 }
 
@@ -219,12 +230,14 @@ body {
     margin-top: 5vw;
     position: relative;
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
     height: 15vh;
     z-index: 1;
     width: 100%;
     overflow: visible;
 }
+
 
 .swiper { 
     width: 100vw;
@@ -249,19 +262,16 @@ body {
     height: 7px;
     width: 20px;
     border-radius: 25px;
-    background-color: var(--red);
+    background-color: var(--navy);
 }
 /* Project page styling */
 
-.projects { 
-
-}
-
 .projects article { 
     display: flex;
-    height: 80%;
+    height: 100%;
+    padding-top: 8vh;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -274,22 +284,130 @@ p {
 
 .projects h2 { 
     font-size: 1.5rem;
+    padding-bottom: 1.5vh;
 }
 
 .projects p { 
     width: 95%;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+
+#project-header { 
+    border-bottom: 2px dashed var(--off-white);
+    margin-bottom: 1.5vh;
 }
 
 /* Project Card swiper */
 
 .swiper.cardSwiper { 
     width: 70vw;
+    width: clamp(100px, 70vw, 500px);
+    margin-bottom: 1.5vh;
 }
 
 .project-card { 
-    width: 50px;
     height: 40vh;
+    height: clamp(200px, 40vh, 500px);
     border-radius: 10px;
     background-color: var(--off-white);
 }
+
+.project-card img { 
+    width: 100%;
+    height: auto;
+}
 /* --------------------------- */
+
+
+/* -------- Animations -------- */
+
+@keyframes slideUp {
+    0% { 
+        top: 100vh;
+    }
+    100% { 
+        top: 0vh;
+    }
+    
+}
+
+
+/* ------- Media Queries -------- */ 
+
+@media only screen and (max-width: 380px) {
+    .about.content p { 
+        width: 95%;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+    }
+}
+
+/* --- Mobile Landscape --- */
+@media only screen and (orientation: landscape) {
+    body { 
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .pages-container { 
+        width: 200%;
+        display: flex;
+    }
+
+    .page { 
+        width: 50%;
+    }
+    
+
+    .about.content { 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 95%;
+        width: 100%;
+    }
+
+    .about.content p { 
+        text-align: left;
+        padding-right: 5vw;
+        width: 50vw;
+    }
+
+    .image-header { 
+        width: 20vw;
+        height: 50vh;
+        gap: 2vh;   
+    }
+
+    #tech-container{ 
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        z-index: 1;
+        width: 20%;
+        overflow: visible;
+    }
+    .card { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        width: 10vw;
+    }
+
+    .swiper-pagination-bullet { 
+        height: 7px;
+        width: 20px;
+        border-radius: 25px;
+        background-color: var(--navy);
+    }
+
+    .projects { 
+        width: 200vw;
+    }
+
+}
